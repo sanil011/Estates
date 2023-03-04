@@ -56,9 +56,9 @@ const Cards = ({   data }) => {
          </Box>
         </Box>
 
-        <Box display={"flex"} width={"40%"} backgroundColor={"primary.main"} sx={{ borderTopRightRadius: "5px", borderBottomRightRadius: "5px" }}>
-          <AutoAwesomeIcon fontSize={"12px"} color="white" />
-          <Typography fontSize={"12px"} color={"#fff"} ml={1} > POPULAR </Typography>
+        <Box  mt={.1} display={"flex"} width={"40%"} backgroundColor={`${data?.superHost?"primary.main":"#fff"}`} sx={{ borderTopRightRadius: "5px", borderBottomRightRadius: "5px" }}>
+          <AutoAwesomeIcon  fontSize={"12px"} color={"white"} />
+          <Typography display={`${data?.superHost ? "flex" : "none"}`} fontSize={"12px"} color={"#fff"} ml={1} > POPULAR </Typography>
         </Box>
 
         <Stack m={1} gap={.5} >
