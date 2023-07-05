@@ -43,7 +43,7 @@ export const filterSlice = createSlice({
 
             state.Location && (filteredItem = filteredItem.filter((db) => db.city.toUpperCase() == state.Location.toUpperCase()))
             
-            state.Property && (filteredItem = filteredItem.filter((db) => db.type == state.Property))
+            state.Property != "All" ? (filteredItem = filteredItem.filter((db) => db.type == state.Property)) :(filteredItem = filteredItem)
             
             state.When && (filteredItem = filteredItem.filter((db) => new Date(db.date).toLocaleDateString() === new Date(state.When).toLocaleDateString()))
 

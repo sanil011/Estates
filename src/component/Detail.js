@@ -30,12 +30,12 @@ const Detail = () => {
 
         setVisible(false)
     } 
-    else if (scrolled <= 600){
+    else if (scrolled <= 300){
         setVisible(false)
         setVisibleScroll(false)
         setVisibleNavbar(false)
     }
-    else if (scrolled > 600) {
+    else if (scrolled > 50) {
         setVisible(true)
         setVisibleNavbar(true)
         setVisibleScroll(false)
@@ -44,10 +44,10 @@ const Detail = () => {
       window.addEventListener('scroll', toggleVisible);
 
     return (
-        <>
+        <div className='scroll-smooth'>
             <Navbar />
             {visibleNavbar  && <div className='fixed z-20 transition-all bg-white w-full h-[3.5em] top-0'>
-                <div className='flex w-[30%] justify-between mx-36 pt-4'>
+                <div className='flex  justify-between mx-4 pt-4'>
                 <h1>Photos</h1>
                 <h1>Amenities</h1>
                 <h1>Reviews</h1>
@@ -274,7 +274,7 @@ const Detail = () => {
                   <p>₹34,230</p>
               </div>
             </div>
-            </>
+            </div>
   )
 }
 
